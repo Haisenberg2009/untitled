@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f2f2f2;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    button {
+      padding: 10px 20px;
+      margin-top: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    .content {
+      display: none;
+    }
+
+    .content.active {
+      display: block;
+    }
+
+    .navigation {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 20px;
+    }
+
+    .navigation a {
+      text-decoration: none;
+      color: #4CAF50;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="navigation">
+      <a href="#inicio">Inicio</a>
+      <a href="#home">Home</a>
+      <a href="#creditos">Créditos</a>
+    </div>
+    <div id="inicio" class="content active">
+      <h1>Bienvenido a la página de Inicio</h1>
+      <p>Contenido de la página de Inicio</p>
+    </div>
+    <div id="home" class="content">
+      <h1>Página Home</h1>
+      <p>Contenido de la página Home</p>
+    </div>
+    <div id="creditos" class="content">
+      <h1>Créditos</h1>
+      <p>Contenido de la página de Créditos</p>
+    </div>
+  </div>
+
+  <script>
+    var navigationLinks = document.querySelectorAll('.navigation a');
+    var contents = document.querySelectorAll('.content');
+
+    // Función para cambiar la página activa
+    function cambiarPagina(event) {
+      event.preventDefault();
+      var target = this.getAttribute('href').substring(1);
+
+      // Ocultar todos los contenidos
+      contents.forEach(function(content) {
+        content.classList.remove('active');
+      });
+
+      // Mostrar solo el contenido de la página seleccionada
+      document.getElementById(target).classList.add('active');
+    }
+
+    // Agregar evento de clic a los enlaces de navegación
+    navigationLinks.forEach(function(link) {
+      link.addEventListener('click', cambiarPagina);
+    });
+  </script>
+</body>
+</html>

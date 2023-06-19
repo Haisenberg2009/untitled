@@ -1,0 +1,21 @@
+.parent {
+    background:sandybrown;
+    min-height: 200px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 100px 600px 400px;
+    gap: 10px;
+}
+
+.parent header { grid-column: 1 / span 6; background: aqua; }
+.parent .menu { grid-column: 1 / span 2; background: crimson; }
+.parent .contentenido { grid-column: 3 / span 6; background: darkolivegreen; }
+.parent .subtitle { grid-column: 1 / span 1; background:cyan;}
+.parent .content { grid-column: 2 / span 6; background: coral;}
+.parent .content2 { grid-column: 1 / span 5; background: coral;}
+.parent .subtitle2 { grid-column: 6 / span 1; background:cyan;}
+.parent footer { grid-column: 1 / span 6; background: gray; }
+
+.image-container {
+    margin-bottom: 10px;
+  }

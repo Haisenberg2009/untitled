@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin-top: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 id="heading">Haz clic en el botón para cambiar el contenido</h1>
+    <button id="button">Cambiar contenido</button>
+    <button id="resetButton">Restaurar contenido original</button>
+  </div>
+
+  <script>
+    var heading = document.getElementById('heading');
+    var originalContent = heading.innerHTML; // Guardar el contenido original
+
+    function cambiarContenido() {
+      heading.innerHTML = '¡El contenido ha sido cambiado!';
+    }
+
+    function restaurarContenido() {
+      heading.innerHTML = originalContent; // Restaurar el contenido original
+    }
+
+    var button = document.getElementById('button');
+    var resetButton = document.getElementById('resetButton');
+
+    button.addEventListener('click', cambiarContenido);
+    resetButton.addEventListener('click', restaurarContenido);
+  </script>
+</body>
+</html>

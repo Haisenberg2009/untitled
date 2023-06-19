@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Comentarios</title>
+  <style>
+    .comment {
+      margin-bottom: 10px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      background-color: #f9f9f9;
+    }
+
+    .comment strong {
+      color: #337ab7;
+    }
+
+    .comment p {
+      margin: 5px 0;
+    }
+
+    #comment-form {
+      margin-bottom: 20px;
+    }
+
+    #comment-form label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    #comment-form input[type="text"],
+    #comment-form textarea {
+      width: 100%;
+      padding: 5px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+    }
+
+    #comment-form button[type="submit"] {
+      padding: 5px 10px;
+      font-size: 16px;
+      background-color: #337ab7;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Comentarios</h1>
+
+  <form id="comment-form">
+    <label for="name">Nombre:</label>
+    <input type="text" id="name" required><br>
+    <label for="comment">Comentario:</label>
+    <textarea id="comment" required></textarea><br>
+    <button type="submit">Agregar comentario</button>
+  </form>
+
+  <div id="comment-list"></div>
+
+  <script>
+    // Función para agregar un comentario
+    function addComment(event) {
+      event.preventDefault();
+
+      var nameInput = document.getElementById("name");
+      var commentInput = document.getElementById("comment");
+      var commentList = document.getElementById("comment-list");
+
+      var name = nameInput.value;
+      var comment = commentInput.value;
+
+      // Crear un nuevo elemento de comentario
+      var commentElement = document.createElement("div");
+      commentElement.classList.add("comment");
+      commentElement.innerHTML = "<strong>" + name + "</strong>: " + comment;
+
+      // Agregar el comentario a la lista
+      commentList.appendChild(commentElement);
+
+      // Limpiar los campos del formulario
+      nameInput.value = "";
+      commentInput.value = "";
+    }
+
+    // Escuchar el evento de envío del formulario
+    var commentForm = document.getElementById("comment-form");
+    commentForm.addEventListener("submit", addComment);
+  </script>
+</body>
+</html>
