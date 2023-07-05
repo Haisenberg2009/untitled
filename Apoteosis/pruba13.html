@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="pruba9.css">
+<script src="pruba9.js"></script>
+<title>Super Mario Bros: La película</title>
+</head>
+<body style="background-color:#f0f0f0;">
+  <div class="parent">
+    <header>
+      <h1 style="font-size: 40px; text-align: center; font-family: Algerian;">Super Mario Bros: La película</h1>
+    </header>
+    <div class="C3">
+      <div style="display: flex; justify-content: center; align-items: center; height: 55vh;">
+        <img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2/zNKs1T0VZuJiVuhuL5GSCNkGdxf.jpg" alt="Super Mario Bros: La película" style="max-width: 90%; width: 90%;">
+      </div>      
+    </div>
+    <div class="contentenido" style="text-align: left; font-family: Arial, sans-serif;">
+      <h3 style="font-weight: bold; margin-bottom: 10px;">Título original: <span style="font-weight: normal;">The Super Mario Bros. Movie</span></h3>
+      <h3 style="font-weight: bold; margin-bottom: 10px;">Director: <span style="font-weight: normal;">Aaron Horvath, Michael Jelenic</span></h3>
+      <h3 style="font-weight: bold; margin-bottom: 10px;">Año de estreno: <span style="font-weight: normal;">2023</span></h3>
+      <h3 style="font-weight: bold; margin-bottom: 10px;">Género: <span style="font-weight: normal;">Aventura, Ciencia ficción, fantástica, Comedia</span></h3>
+      <h3 style="font-weight: bold; margin-bottom: 10px;">Duración: <span style="font-weight: normal;">92 minutos</span></h3>
+      <h3 style="font-weight: bold; margin-bottom: 10px;">Idioma original: <span style="font-weight: normal;">Inglés</span></h3>
+      <h3 style="font-weight: bold; margin-bottom: 10px;">País: <span style="font-weight: normal;">Estados Unidos, Japón</span></h3>
+      <h2 style="text-align: left;">Sinopsis:</h2>
+      <p style="text-align: justify; margin: 0 50px;">Mientras trabajan en una avería subterránea, los fontaneros de Brooklyn, Mario y su hermano Luigi, viajan por una misteriosa tubería hasta un nuevo mundo mágico. Pero, cuando los hermanos se separan, Mario deberá emprender una épica misión para encontrar a Luigi.</p>
+    </div>
+    <footer>
+      <h1>Comentarios</h1>
+
+      <div class="comment-container" id="comment-conteiner">
+        <label for="name">Nombre:</label>
+        <input type="text" id="name">
+        <br>
+        <label for="comment">Comentario:</label>
+        <textarea id="comment"></textarea>
+        <br>
+        <button type="submit" onclick="addComment(event)">Agregar comentario</button>
+      </div>
+
+      <div id="comment-list"></div>
+    </footer>
+  </div>
+</body>
+</html>

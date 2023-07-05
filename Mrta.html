@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario con DOM Form</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Formulario con DOM Form</h1>
+
+  <form id="comment-form">
+    <div>
+      <label for="name">Nombre:</label>
+      <input type="text" id="name" name="name" required>
+    </div>
+    <div>
+      <label for="comment">Comentario:</label>
+      <textarea id="comment" name="comment" rows="4" required></textarea>
+    </div>
+    <div>
+      <button type="submit">Agregar Comentario</button>
+    </div>
+  </form>
+
+  <div id="comment-list">
+    <h2>Comentarios:</h2>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
